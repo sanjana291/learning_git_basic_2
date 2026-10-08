@@ -1,0 +1,15 @@
+zephyr_udc0: &usb2 {
+	status = "okay";
+	phy_handle = <&usbphy2>;
+
+	cdc_acm_uart0: cdc_acm_uart0 {
+		compatible = "zephyr,cdc-acm-uart";
+	};
+};
+
+&usbphy2 {
+	status = "okay";
+	tx-d-cal = <7>;
+	tx-cal-45-dp-ohms = <6>;
+	tx-cal-45-dm-ohms = <6>;
+};
